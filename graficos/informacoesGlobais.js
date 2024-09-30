@@ -1,24 +1,17 @@
-/*Crie uma pasta chamada: graficos
-Crie um arquivo dentro desta pasta chamada: informacoesGlobais.js*/
-
-/*O endereço abaixo você encontra neste endereço, no link "dados
-globais" https://github.com/guilhermeonrails/api?tab=readme-ov-file*/
-
-/*const url='https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
-
-console.log(url);*/
-
 const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
 
-/*IMPORTANTE: NO INDEX LOGO ABAIXO DO FOOTER digite: 
-script type="module" src="graficos/informacoesGlobais.js></script>*/
-
-/*Esse comando requisitará os dados da url acima*/
-async function visualizarInformacoesGlobais(){
-    /*O comando abaixo aguarda a requisição feita acima*/
+async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
-    /*O próximo comando pegará somente a parte da resposta do conteúdo da url*/ 
-    const dados = await res.json
-    console.log(dados);    
+    const dados = await res.json()
+    console.log(dados);
+    const paragrafo = document.createElement('p')
+    paragrafo.classList.add('graficos-container__texto')
+    
+    paragrafo.innerHTML = `Você sabia que o mundo tem <span>${dados.total_pessoas_mundo}</span> de pessoas e que aproximadamente <span>${dados.total_pessoas_conectadas}</span> estão conectadas em alguma rede social e passam em média <span>${dados.tempo_medio}</span> horas conectadas.`
+    console.log(paragrafo)
+
+    const container = document.getElementById('graficos-container')
+    container.appendChild(paragrafo)
 }
-visualizarInformacoesGlobais()
+
+vizualizarInformacoesGlobais()
