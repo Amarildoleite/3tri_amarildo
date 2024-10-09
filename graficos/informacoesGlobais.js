@@ -25,10 +25,10 @@ async function vizualizarInformacoesGlobais() {
     /*O comando abaixo aguarda a requisição feita acima*/
     const res = await fetch(url)    
     /*O próximo comando pegará somente a parte da resposta do conteúdo da url*/    
-    const dados = await res.json()
-    /*console.log(dados);*/
+    const dados = await res.json()    
     /*Teremos duas estruturas, uma relacionada só a gráfico e outra relacionada a textos*/
-    const pessoasConectadas = (dados.total_pessoas_conectadas / 1e9)
+    const pessoasConectadas = (dados.
+    total_pessoas_conectadas / 1e9)
     const pessoasNoMundo = (dados.total_pessoas_mundo / 1e9)
     const horas = parseInt(dados.tempo_medio)
     const minutos = Math.round((dados.tempo_medio - horas)*100)
