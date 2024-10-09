@@ -36,7 +36,7 @@ Copie tudo (somente) dentro da tag – Style
      /*O comando abaixo indicará a cor de texto a ser usado no projeto*/
      color: var(--primary-color);
      /*O comando abaixo indicará a fonte a ser usado no projeto*/
-     font: var(--font);
+     font-family: var(--font);
      /*Para usar toda a disposição da tela que temos*/
      height: 100vh;
      /*Para deixar sem margem*/
@@ -82,7 +82,7 @@ nav a:hover {
     /*aparece o underline*/
     text-decoration: underline;
     /*aumenta um pouco o tamanho da letra*/
-    transform: escale(0.90);
+    transform: scale(0.90);
     /*altera a velocidade*/
     transition: transform 0.1s;
 }
