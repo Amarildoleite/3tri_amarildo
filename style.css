@@ -59,8 +59,6 @@ h1 {
     color: var(--bg-color);
     /*Peso da fonte*/
     font-weight: 700;
-
-
 }
 /*Agora vamos estilizar o Nav*/
 nav {
@@ -107,12 +105,6 @@ span {
     font-weight: bold;
     color: var(--secondary-color);
 }
-
-
-
-
-
-
 /*Agora vamos estilizar o Footer*/
 footer {
     display: flex;
