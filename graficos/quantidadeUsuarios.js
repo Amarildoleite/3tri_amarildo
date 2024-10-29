@@ -13,7 +13,7 @@ https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json
 /*Cole o conteúdo desse artigo no arquivo criado*/
 /*AQUI TINHA UM ERRO*/
 async function quantidadeUsuariosPorRede() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json*/'
+    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     /*Contante para aguardar a resposta, será feita a requisição dos dados da url acima*/
     const res = await fetch(url) 
     /*onde pegar a resposta e o conteúdo*/
@@ -26,7 +26,12 @@ async function quantidadeUsuariosPorRede() {
         {
             x: nomeDasRedes,
             y: quantidadeUsuarios, 
-            type: 'bar'
+            type: 'bar',
+            /*Alterar a cor das barras do gráfico*/
+            marker: {
+                /*Irá pegar a formatação (estilos) do body*/
+                color: getComputedStyle(document.body).getPropertyValue(--primary-color)
+            }
         }
     ]
     /*colocar o gráfico dentro de uma div*/
