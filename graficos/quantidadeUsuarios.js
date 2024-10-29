@@ -11,7 +11,8 @@ https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json
 <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>*/
 
 /*Cole o conteúdo desse artigo no arquivo criado*/
-async function quantidadeUsuarios() {
+/*AQUI TINHA UM ERRO*/
+async function quantidadeUsuariosPorRede() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json*/'
     /*Contante para aguardar a resposta, será feita a requisição dos dados da url acima*/
     const res = await fetch(url) 
@@ -38,4 +39,5 @@ async function quantidadeUsuarios() {
     Plotly.newPlot(grafico, data)
 }
 /*Chamar a função*/
-quantidadeUsuarios()
+/*aqui tinha um ERRO*/
+quantidadeUsuariosPorRede()
