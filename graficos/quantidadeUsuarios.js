@@ -1,3 +1,4 @@
+import { getCSS } from "./common.js"
 /*A aula de hoje usará os dados do site abaixo para gerar um gráfico:
 https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json*/
 
@@ -30,10 +31,16 @@ async function quantidadeUsuariosPorRede() {
             /*Alterar a cor das barras do gráfico*/
             marker: {
                 /*Irá pegar a formatação (estilos) do body*/
-                color: getComputedStyle(document.body).getPropertyValue(--primary-color)
+                color: getCSS ('--primary-color')
             }
         }
     ]
+    const layout {
+        /*Excluir a cor branca e deixar somente a cor do background, acrescentar layout lá no plotly*/
+        plot_bgcolor: getCSS('--bg-color')
+        /*Mudar a cor atrás do grafico*/
+        paper_bgcolor: getCSS('--bg-color')
+    }
     /*colocar o gráfico dentro de uma div*/
     const grafico = document.creatElement('div')
     /*classe css*/
@@ -41,7 +48,7 @@ async function quantidadeUsuariosPorRede() {
     /*Para acessar o código lá do html (o comando appendiChild, serve para inserir o gráfico*/
     document.getElementById('graficos-container').appendChild(grafico)
     /*criar um novo gráfico (com o comando data ele gerará o gráfico com os dados que queremos*/
-    Plotly.newPlot(grafico, data)
+    Plotly.newPlot(grafico, data, layout)
 }
 /*Chamar a função*/
 /*aqui tinha um ERRO*/
