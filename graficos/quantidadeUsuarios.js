@@ -38,7 +38,7 @@ async function quantidadeUsuariosPorRede() {
     ]
     const layout = {
         /*Excluir a cor branca e deixar somente a cor do background, acrescentar layout lá no plotly*/
-        plot_bgcolor: getCSS('--bg-color')
+        plot_bgcolor: getCSS('--bg-color'),
         /*Mudar a cor atrás do grafico*/
         paper_bgcolor: getCSS('--bg-color')
     }
