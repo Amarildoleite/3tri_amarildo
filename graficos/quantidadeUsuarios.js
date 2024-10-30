@@ -1,3 +1,4 @@
+/*Acrescentado recente para chamar o common*/
 import { getCSS } from "./common.js"
 /*A aula de hoje usará os dados do site abaixo para gerar um gráfico:
 https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json*/
@@ -21,12 +22,12 @@ async function quantidadeUsuariosPorRede() {
     const = await res.jason()
     /*separar as chaves (por exemplo facebook) dos valores (quantidade usuários) correspondentes*/
     const nomeDasRedes = Object.keys(dados)
-    const quantidadeUsuarios = Object.values(dados)
+    const quantidadeDeUsuarios = Object.values(dados)
     /*gerando os gráficos*/
     const data = [
         {
             x: nomeDasRedes,
-            y: quantidadeUsuarios, 
+            y: quantidadeDeUsuarios, 
             type: 'bar',
             /*Alterar a cor das barras do gráfico*/
             marker: {
