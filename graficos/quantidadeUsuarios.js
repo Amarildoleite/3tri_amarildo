@@ -19,7 +19,7 @@ async function quantidadeUsuariosPorRede() {
     /*Contante para aguardar a resposta, será feita a requisição dos dados da url acima*/
     const res = await fetch(url) 
     /*onde pegar a resposta e o conteúdo*/
-    const = await res.jason()
+    const dados = await res.jason()
     /*separar as chaves (por exemplo facebook) dos valores (quantidade usuários) correspondentes*/
     const nomeDasRedes = Object.keys(dados)
     const quantidadeDeUsuarios = Object.values(dados)
