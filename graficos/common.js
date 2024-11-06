@@ -5,12 +5,13 @@
 
 /*Tudo que for comum, vamos colocar aqui*/
 const getCSS = (variavel) => {
-    return getComputedStyle(document.body).getPropertyValue(variavel)
+    const bodyStyles = getComputedStyle(document.body)
+    return bodyStyles.getPropertyValue(variavel)
 }
 const tickConfig = {
     color: getCSS(--primary-color),
-                size: 16,
-                family: getCSS('font')
+    size: 16,
+    family: getCSS('--font')
 }
 /*Exportar para que outros módulos possam utilizar*/
 export {getCSS, tickConfig}
