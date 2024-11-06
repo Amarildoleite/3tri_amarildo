@@ -92,8 +92,10 @@ nav a:hover {
 }
 
 
-
-
+/**Ajustando o gráfico na página**/
+.grafico {
+    margin-top: 3rem;
+}
 .graficos-container {
     margin: 5rem;
 }

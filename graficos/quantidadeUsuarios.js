@@ -1,5 +1,5 @@
 /*Acrescentado recente para chamar o common*/
-import { getCSS } from "./common.js"
+import { getCSS, tickConfig } from "./common.js"
 /*A aula de hoje usará os dados do site abaixo para gerar um gráfico:
 https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json*/
 
@@ -40,7 +40,39 @@ async function quantidadeUsuariosPorRede() {
         /*Excluir a cor branca e deixar somente a cor do background, acrescentar layout lá no plotly*/
         plot_bgcolor: getCSS('--bg-color'),
         /*Mudar a cor atrás do grafico*/
-        paper_bgcolor: getCSS('--bg-color')
+        paper_bgcolor: getCSS('--bg-color'),
+        /**títulos para o gráfico**/
+        title: {
+            text: 'Redes Sociais com mais usuários no mundo',
+            /**posição alinhado a esquerda */
+            x: 0,
+            font: {
+                color: getCSS('--primary-color'),
+                family: getCSS('--font'),
+                size: 30
+            }
+        },
+        /**Legente do eixo x e y **/
+        xaxis:{
+            /**configuração das legendas abaixo de cada barra do gráfico**/
+            tickfont tickConfig, /**Este comando pega a formatação definida no common.js**/
+            title:{
+                text:'nome das redes sociais',
+                fonte: {
+                    color: getCSS('--secundary-color')
+                }
+            }
+        }
+        yaxis{
+            tickfont tickConfig,
+            title:{
+                text:'bilhões de usuários ativos',
+                fonte: {
+                    color: getCSS('--secundary-color')
+                }
+            }
+
+        }
     }
     /*colocar o gráfico dentro de uma div*/
     const grafico = document.creatElement('div')
