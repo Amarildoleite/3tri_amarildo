@@ -55,20 +55,20 @@ async function quantidadeUsuariosPorRede() {
         /**Legente do eixo x e y **/
         xaxis:{
             /**configuração das legendas abaixo de cada barra do gráfico**/
-            tickfont tickConfig, /**Este comando pega a formatação definida no common.js**/
+            tickfont: tickConfig, /**Este comando pega a formatação definida no common.js**/
             title:{
                 text:'nome das redes sociais',
                 fonte: {
-                    color: getCSS('--secundary-color')
+                    color: getCSS('--secondary-color')
                 }
             }
-        }
-        yaxis{
-            tickfont tickConfig,
+        },
+        yaxis:{
+            tickfont: tickConfig,
             title:{
-                text:'bilhões de usuários ativos',
-                fonte: {
-                    color: getCSS('--secundary-color')
+                text: 'bilhões de usuários ativos',
+                font: {
+                    color: getCSS('--secondary-color')
                 }
             }
 
