@@ -58,7 +58,7 @@ Copie tudo (somente) dentro da tag – Style
 /*Agora vamos estilizar o h1, que está dentro do header*/
 h1 {
     /*tamanho da fonte*/
-    font-size: 2 rem;
+    font-size: 2rem;
     /*cor da letra*/
     color: var(--bg-color);
     /*Peso da fonte*/
@@ -92,15 +92,14 @@ nav a:hover {
 }
 
 
-/**Ajustando o gráfico na página**/
-.grafico {
-    margin-top: 3rem;
-}
 .graficos-container {
     margin: 5rem;
 }
 
-
+/**Ajustando o gráfico na página**/
+.grafico {
+    margin-top: 3rem;
+}
 
 
 .graficos-container__texto {
@@ -109,8 +108,6 @@ nav a:hover {
     padding: 2rem;
     border: var(--secondary-color) solid 2px;
 }
-
-
 
 
 span {
