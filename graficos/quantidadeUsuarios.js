@@ -36,7 +36,7 @@ async function quantidadeUsuariosPorRede() {
             }
         }
     ]
-    const laytout = {
+    const layout = {
         /*Excluir a cor branca e deixar somente a cor do background, acrescentar layout lá no plotly*/
         plot_bgcolor: getCSS('--bg-color'),
         /*Mudar a cor atrás do grafico*/
@@ -81,7 +81,7 @@ async function quantidadeUsuariosPorRede() {
     /*Para acessar o código lá do html (o comando appendiChild, serve para inserir o gráfico*/
     document.getElementById('graficos-container').appendChild(grafico)
     /*criar um novo gráfico (com o comando data ele gerará o gráfico com os dados que queremos*/
-    Plotly.newPlot(grafico, data, laytout)
+    Plotly.newPlot(grafico, data, layout)
 }
 /*Chamar a função*/
 /*aqui tinha um ERRO*/
