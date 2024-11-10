@@ -36,7 +36,7 @@ async function quantidadeUsuariosPorRede() {
             }
         }
     ]
-    const layout = {
+    const laytout = {
         /*Excluir a cor branca e deixar somente a cor do background, acrescentar layout lá no plotly*/
         plot_bgcolor: getCSS('--bg-color'),
         /*Mudar a cor atrás do grafico*/
@@ -48,8 +48,8 @@ async function quantidadeUsuariosPorRede() {
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
-                family: getCSS('--font'),
-                size: 30
+                size: 30,
+                font: getCSS('--font')
             }
         },
         /**Legente do eixo x e y **/
@@ -58,7 +58,7 @@ async function quantidadeUsuariosPorRede() {
             tickfont: tickConfig, /**Este comando pega a formatação definida no common.js**/
             title:{
                 text:'nome das redes sociais',
-                fonte: {
+                font: {
                     color: getCSS('--secondary-color')
                 }
             }
@@ -75,13 +75,13 @@ async function quantidadeUsuariosPorRede() {
         }
     }
     /*colocar o gráfico dentro de uma div*/
-    const grafico = document.creatElement('div')
+    const grafico = document.createElement('div')
     /*classe css*/
     grafico.className = 'grafico'
     /*Para acessar o código lá do html (o comando appendiChild, serve para inserir o gráfico*/
     document.getElementById('graficos-container').appendChild(grafico)
     /*criar um novo gráfico (com o comando data ele gerará o gráfico com os dados que queremos*/
-    Plotly.newPlot(grafico, data, layout)
+    Plotly.newPlot(grafico, data, laytout)
 }
 /*Chamar a função*/
 /*aqui tinha um ERRO*/
