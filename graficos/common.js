@@ -9,9 +9,10 @@ const getCSS = (variavel) => {
     return bodyStyles.getPropertyValue(variavel)
 }
 const tickConfig = {
-    color: getCSS(--primary-color),
+    family: getCSS('--font'),
     size: 16,
-    family: getCSS('--font')
+    color: getCSS('--primary-color')
+        
 }
 /*Exportar para que outros módulos possam utilizar*/
 export {getCSS, tickConfig}
